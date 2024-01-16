@@ -1,0 +1,103 @@
+.head {
+	background-color: rgb(253, 253, 253);
+	height: 50rpx;
+  margin-left: 20rpx;
+}
+.courseName {
+	font-size: 47rpx;
+}
+
+.neck {
+  background-color: rgb(253, 253, 253);
+	height: 95rpx;
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 使子元素在垂直方向上居中 */
+}
+.teacherName {
+	font-size: 27rpx;
+	color: rgb(0, 0, 0);
+}
+.stuCount {
+  margin-left: 50rpx;
+	font-size: 27rpx;
+	color: rgb(0, 0, 0);
+}
+.addStudent {
+  margin-left: 20rpx !important;
+  height: 55rpx !important;
+  border-radius: 30rpx !important;
+}
+
+.studentInfo {
+	margin-left: 20rpx;
+  font-size: 45rpx;
+}
+
+.body {
+	background-color: rgb(255, 255, 255);
+	margin-top: 10rpx;
+	height: 120rpx;
+  border-radius: 20rpx;
+}
+.nameLine {
+  display: flex;
+  align-items: center; /* 使子元素在垂直方向上居中 */
+}
+.delStudent {
+  margin-right: 20rpx !important;
+  height: 55rpx !important;
+  border-radius: 30rpx !important;
+}
+.addScore{
+  margin-right: 20rpx !important;
+  height: 55rpx !important;
+  border-radius: 30rpx !important;
+}
+.stuName {
+  width: 450rpx;
+  margin-left: 20rpx;
+  margin-bottom: 13rpx;
+  font-size: 35rpx;
+}
+.stuNo {
+  margin-left: 100rpx;
+  font-size: 27rpx;
+}
+.stuClass {
+  margin-left: 20rpx;
+  font-size: 27rpx;
+}
+.score {
+	margin-left: 100rpx;
+}
+.choose {
+  margin-top: 10rpx;
+}
+.value-class {
+  flex: none !important;
+}
+.add {
+  margin-left: 620rpx !important;
+  margin-top: 20rpx !important;
+  height: 65rpx !important;
+  border-radius: 30rpx !important;
+}
+.popup {
+  background-color: rgb(239, 247, 247) !important;
+}
+.scorePopub {
+  font-size: 37rpx;
+  margin-top: 90rpx;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center; 
+}
+.scoreInput {
+  border-radius: 20rpx !important;
+}
+.scoreSubmit {
+  margin-left: 65rpx;
+  border-radius: 20rpx !important;
+}

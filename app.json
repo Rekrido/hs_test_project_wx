@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/course/course",
+    "pages/student/student",
+    "pages/index/index",
+    "pages/addCourse/addCourse",
+    "pages/addStu/addStu",
+    "pages/courseItem/courseItem",
+    "pages/studentItem/studentItem",
+    "pages/courseUpdate/courseUpdate",
+    "pages/studentUpdate/studentUpdate"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程",
+        "iconPath": "/static/images/course.png",
+        "selectedIconPath": "/static/images/selectedCourse.png"
+      },
+      {
+        "pagePath": "pages/student/student",
+        "text": "学生",
+        "iconPath": "/static/images/student.png",
+        "selectedIconPath": "/static/images/selectedStudent.png"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index"
+  }
+}

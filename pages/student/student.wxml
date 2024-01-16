@@ -1,0 +1,25 @@
+
+<wxs src="../../utils/tools.wxs" module="tools"></wxs>
+<view class="head">
+  <van-field 
+  model:value="{{ stuName }}"
+  placeholder="请输入学生姓名"
+  border="{{ true }}"
+  custom-class="searchInput"
+  />
+  <van-button  type="info" size="normal" custom-class="searchButton" bindtap="searchStu" >搜索</van-button>
+  <van-button icon="plus" type="info" custom-class="add" bindtap="handAdd"></van-button> 
+</view>
+<view>
+  <view class="student" wx:for="{{stuList}}" wx:for-item="stuItem" wx:key="id"bindtap="handelView" data-stuItem="{{stuItem}}">
+    <text class="stuName">{{stuItem.stuName}}</text>
+    <view class="lineTwo">
+      <text class="stuClass">班级: {{tools.substring(stuItem.stuNo,0,6)}}</text>
+      <text class="stuNo">学号: {{stuItem.stuNo}}</text> 
+    </view>
+    <view class="courseFooter">
+      <van-button  type="default" size="normal" custom-class="updateButton" catchtap ="updateStudent" data-studentItem="{{stuItem}}">编辑</van-button>
+      <van-button  type="default" size="normal" custom-class="deleteButton" catchtap ="deleteStudent" data-studentId = "{{stuItem.id}}" >移除</van-button>
+    </view>
+  </view>
+</view>

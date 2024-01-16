@@ -1,0 +1,18 @@
+.foot {
+  display: flex;
+  margin-top: 30rpx;
+  justify-content: center;
+}
+.cancel {
+  border-radius: 20rpx !important;
+  width: 300rpx !important;
+  margin-right: 30rpx !important;
+}
+.submit {
+  border-radius: 20rpx !important;
+  width: 300rpx !important;
+  margin-left: 30rpx !important;
+}
+.choose {
+  margin-top: 10rpx;
+}

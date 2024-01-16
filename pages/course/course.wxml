@@ -1,0 +1,30 @@
+<view class="head">
+  <van-field 
+  model:value="{{ courseName }}"
+  placeholder="请输入课程名"
+  border="{{ true }}"
+  custom-class="searchInput"
+  />
+  <van-button  type="info" size="normal" custom-class="searchButton" bindtap="searchCourse" >搜索</van-button>
+  <van-button icon="plus" type="info" custom-class="add" bindtap="handAdd"></van-button> 
+</view>
+<view>
+  <view 
+  class="course" 
+  wx:for="{{courseList}}" 
+  wx:for-item="courseItem" 
+  wx:key="id"
+  >
+    <view bindtap="handelView"  data-courseItem="{{courseItem}}">
+      <text class="courseName">{{courseItem.courseName}}</text>
+      <view class="lineTwo">
+        <text class="teacherName">任课教师: {{courseItem.teacherName}}</text>
+        <text class="stuCount">选课人数: {{courseItem.stuList.length}}人</text>
+      </view>
+      <view class="courseFooter">
+        <van-button  type="default" size="normal" custom-class="updateButton" catchtap ="updateCourse" data-courseItem="{{courseItem}}">编辑</van-button>
+        <van-button  type="default" size="normal" custom-class="deleteButton" catchtap ="deleteCourse" data-courseId = "{{courseItem.id}}" >移除</van-button>
+      </view>
+    </view>
+  </view>
+</view>

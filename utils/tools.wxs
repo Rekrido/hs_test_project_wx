@@ -1,0 +1,13 @@
+
+var substring = function (value,begainIndex,endIndex) {
+	if (value) {
+		value += ""
+		return value.substring(begainIndex, endIndex)
+	}else {
+		return ''
+	}
+}
+
+module.exports = {
+  substring: substring
+}

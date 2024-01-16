@@ -1,0 +1,26 @@
+.foot {
+  display: flex;
+  margin-top: 30rpx;
+  justify-content: center;
+}
+.cancel {
+  border-radius: 20rpx !important;
+  width: 300rpx !important;
+  margin-right: 30rpx !important;
+}
+.submit {
+  border-radius: 20rpx !important;
+  width: 300rpx !important;
+  margin-left: 30rpx !important;
+}
+.choose {
+  margin-top: 10rpx;
+}
+.value-class {
+	display: grid !important;
+  grid-template-columns: 1fr auto !important; /* 左右两个元素各占一半宽度 */
+  align-items: center !important; /* 垂直居中对齐 */
+}
+.teacherName {
+	margin-right: 50rpx;
+}

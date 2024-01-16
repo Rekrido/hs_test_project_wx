@@ -1,0 +1,18 @@
+<view class="head">
+  <van-field
+    label="姓名"
+    model:value="{{studentName}}"
+    placeholder="请输入姓名"
+    border="{{ true }}"
+  />
+  <van-field
+    label="学号"
+    model:value="{{studentNo}}"
+    placeholder="请输入学号"
+    border="{{ true }}"
+  />
+</view>
+<view class="foot">
+  <van-button type = "info" bindtap="handelCancel" custom-class="cancel">取消</van-button>
+  <van-button type = "info" bindtap="handelSubmit" custom-class="submit">提交</van-button>
+</view>

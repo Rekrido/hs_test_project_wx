@@ -1,0 +1,50 @@
+<view class="head">
+  <van-field
+    label="姓名"
+    model:value="{{studentName}}"
+    placeholder="请输入姓名"
+    border="{{ true }}"
+  />
+  <van-field
+    label="学号"
+    model:value="{{studentNo}}"
+    placeholder="请输入学号"
+    border="{{ true }}"
+  />
+  <van-cell title="添加课程" is-link bind:click="showPopup">
+    <text class="stuCheckCount">已选{{courseIdList.length}}节课</text>
+  </van-cell>
+  <van-popup
+    show="{{ show }}"
+    round
+    position="bottom"
+    custom-style="height: 50%;"
+    bind:close="onClose"
+  >
+    <view class="choose">
+      <van-checkbox-group value="{{ courseIdList }}" bind:change="onChange">
+        <van-cell-group>
+          <van-cell
+            wx:for="{{ courseList }}"
+            wx:for-item="courseItem"
+            wx:key="id"
+            title="{{courseItem.courseName}}"
+            value-class="value-class"
+            clickable
+            data-index="{{ index }}"
+          >
+						<text class="teacherName">任课教师：{{courseItem.teacherName}}</text>
+            <van-checkbox
+              custom-class="checkbox"
+              name="{{ courseItem.id }}"
+            />
+          </van-cell>
+        </van-cell-group>
+      </van-checkbox-group>
+    </view>
+  </van-popup>
+</view>
+<view class="foot">
+  <van-button type = "info" bindtap="handelCancel" custom-class="cancel">取消</van-button>
+  <van-button type = "info" bindtap="handelSubmit" custom-class="submit">提交</van-button>
+</view>

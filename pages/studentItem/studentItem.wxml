@@ -1,0 +1,48 @@
+<wxs src="../../utils/tools.wxs" module="tools"></wxs>
+<view class="head">
+	<text class="stuName">{{studentItem.stuName}}</text>
+</view>
+<view class="neck">
+	<text class="stuClassNo">班级: {{tools.substring(studentItem.stuNo,0,6)}}</text>
+	<text class="stuNo">学号: {{studentItem.stuNo}}</text>
+	<van-button  type="info" size="normal" custom-class="addCourse" bindtap="showPopup" >添加课程</van-button>
+	<van-popup
+    show="{{ show }}"
+    round
+    position="bottom"
+    custom-style="height: 50%;"
+    bind:close="onClose"
+  >
+	<van-button  type="info" size="normal" custom-class="add" bindtap="addCourse" >添加</van-button>
+    <view class="choose">
+      <van-checkbox-group value="{{ courseIdList }}" bind:change="onChange">
+        <van-cell-group>
+          <van-cell
+            wx:for="{{ courseList }}"
+            wx:for-item="courseItem"
+            wx:key="id"
+            title="{{courseItem.courseName}}"
+            value-class="value-class"
+            clickable
+            data-index="{{ index }}"
+          >
+            <van-checkbox
+              custom-class="checkbox"
+              name="{{ courseItem.id }}"
+            />
+          </van-cell>
+        </van-cell-group>
+      </van-checkbox-group>
+    </view>
+  </van-popup>
+</view>
+<text class="courseInfo" wx:if="{{studentItem.courseList != null && studentItem.courseList.length > 0}}">选课信息:</text>
+<view class="body" wx:for="{{studentItem.courseList}}" wx:for-item="courseItem" wx:key="id">
+	<view class="nameLine">
+		<text class="courseName">{{courseItem.courseName}}</text>
+		<van-button  type="info" size="normal" custom-class="delCourse" bindtap="delCourse" data-courseId="{{courseItem.id}}" >移除</van-button>
+	</view>
+  <text class="teacherName">任课教师: {{courseItem.teacherName}}</text> 
+	<text class="score" wx:if="{{courseItem.score != null}}">成绩：{{courseItem.score}}</text>
+	<text class="score" wx:else="">成绩：暂无</text>
+</view>

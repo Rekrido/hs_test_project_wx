@@ -1,0 +1,60 @@
+.head {
+  display: flex;
+  margin-left: 20rpx;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.searchInput {
+  font-size: 35rpx !important;
+  border-radius: 30rpx !important;
+  width: 500rpx !important;
+  margin-left: -17rpx !important;
+}
+.searchButton {
+  margin-left: 17rpx !important;
+  height: 80rpx !important;
+  border-radius: 30rpx !important;
+}
+.add {
+  margin-left: 17rpx !important;
+  width: 80rpx !important;
+  height: 80rpx !important;
+  border-radius: 20rpx !important;
+}
+.course {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  margin-top: 10rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+}
+.courseName {
+  display: block;
+  margin-left: 20rpx;
+  margin-bottom: 13rpx;
+  font-size: 38rpx;
+}
+.lineTwo {
+  display: flex;
+}
+.teacherName {
+  width: 390rpx;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+.stuCount {
+  margin-right: 40rpx;
+  font-size: 30rpx;
+}
+.updateButton {
+  margin-top: 10rpx !important;
+  margin-left: 400rpx !important;
+  height: 55rpx !important;
+  border-radius: 20rpx !important;
+}
+.deleteButton {
+  margin-top: 10rpx !important;
+  margin-left: 50rpx !important;
+  height: 55rpx !important;
+  border-radius: 20rpx !important;
+}
